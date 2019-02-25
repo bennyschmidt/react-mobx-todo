@@ -7,6 +7,7 @@ import { Button, ButtonText, Screen, TextBox } from './styles';
 const buttonText = `Add`;
 const placeholderText = `Add new item`;
 
+@observer
 class App extends React.Component {
   static propTypes = {
     store: PropTypes.shape({
@@ -110,4 +111,4 @@ class App extends React.Component {
   }
 }
 
-export const AppContainer = observer(App);
+export { App };

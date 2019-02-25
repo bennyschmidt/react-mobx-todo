@@ -30,7 +30,8 @@ export class TodoListStore {
     todoListItems: []
   });
 
-  deleteTodoListItem = action(async (item) => {
+  @action
+  deleteTodoListItem = async item => {
     let state = this.state.get();
     const { todoListItems } = state;
 
@@ -50,9 +51,10 @@ export class TodoListStore {
     } catch(error) {
       console.log(error.message);
     }
-  });
+  };
 
-  putTodoListItem = action(async (item) => {
+  @action
+  putTodoListItem = async item => {
     let state = this.state.get();
     const { todoListItems } = state;
 
@@ -74,14 +76,15 @@ export class TodoListStore {
     }
 
     return this.state.get().todoListItems;
-  });
+  };
 
-  toggleTodoListItem = action(async (item) => {
+  @action
+  toggleTodoListItem = async item => {
     const completed = !item.completed.get();
     const id = item.id;
     const text = item.text.get();
 
     return this.putTodoListItem({ completed, id, text });
-  });
+  };
 
 }
