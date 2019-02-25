@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Button = styled.button`
   position: absolute;
   z-index: 10;
-  top: ${(window.innerHeight - 120)}px;
-  width: ${(window.innerWidth - 40)}px;
+  top: calc(100% - 120px);
+  width: calc(100% - 40px);
   height: 60px;
   margin: 20px;
   background-color: blue;
@@ -29,8 +29,8 @@ export const Screen = styled.div`
 export const TextBox = styled.input`
   position: absolute;
   z-index: 10;
-  top: ${(window.innerHeight - 188)}px;
-  width: ${(window.innerWidth - 40)}px;
+  top: calc(100% - 188px);
+  width: calc(100% - 40px);
   height: 50px;
   margin: 20px;
   padding: 0 10px;
